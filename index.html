@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RSS Test</title>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!-- Channels -->
+	<div class="section">
+		<input id="name-channel" type="text" placeholder="Add rss">
+		<input id="add-channel" type="button" value="Add">
+		<div class="channels__count"></div>
+		<ul class="channels"></ul>
+	</div>
+
+	<!-- Articles -->
+	<div class="section">
+		<ul class="articles"></ul>
+	</div>
+
+	<!-- Message -->
+	<div class="section">
+		<div class="messages"></div>
+	</div>
+
+	<!-- Chart -->
+	<div class="section" id="chart"></div>
+
+	<script src="main.js"></script>
+
+</body>
+</html>
