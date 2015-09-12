@@ -135,6 +135,12 @@
                     createChart(message);
                 }
             }
+        },
+        clearSections : function() {
+
+            $('.articles').html('');
+            $('.messages').html('');
+            $('#chart').html('');
         }
     };
 
@@ -149,12 +155,9 @@
     $(document).on('click','.channels__item', function(){
         var url = $(this).attr('data-url');
 
-        $('.messages').html('');
-        $('#chart').html('');
-
+        Application.clearSections();
         Application.createArticles(url);
     });
-
 
     $(document).on('click','.articles__item', function(){
         var number = $(this).attr('data-number');
@@ -176,10 +179,7 @@
     	$(this).parent().remove();
         
         //clear all sections after remove channel
-        $('.articles').html('');
-        $('.messages').html('');
-        $('#chart').html('');
-
+        Application.clearSections();
     	Application.showCountChannels('minus');
     });
 
