@@ -28,7 +28,7 @@
                 data.push(response.responseData.feed);
 
                 $('.channels').append('<li class="channels__item" data-url="'+data[0].feedUrl+'"><div class="channels__name">' + data[0].title+'</div><div class="channels__close"></div></li>')               
-                    .trigger('add-channel');
+                    .trigger('add-channel'); //create add-cannel event
             });              
         },
         showCountChannels: function(sign) {
@@ -137,7 +137,6 @@
             }
         },
         clearSections : function() {
-
             $('.articles').html('');
             $('.messages').html('');
             $('#chart').html('');
